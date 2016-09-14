@@ -10,17 +10,17 @@
     border: 10px solid yellow;margin-bottom: 10px;
         width:720px;}
 
-
-    label{ width: 180px; display: inline-block;
-        text-align: right;
-        text-align: top;
-        width: 180px;
-
-    }
-    textarea{
-        width: 360px; height: 50px;
+    label{
+        width: 180px; display: inline-block; text-align: right; vertical-align: top;
     }
 
+     textarea {
+         width:360px; height: 50px; }
+
+    .info{
+        width: auto;
+    }
+<
 
 
 </style>
@@ -28,21 +28,27 @@
 
 </head>
 <body>
-<form method="post" id="Datingform">
-<label></label>
+<label method="post" id="Datingform"></label>
     <fieldset>
     <legend>Your appearance</legend>
-        Your image: <input type="file" name="pic" accept="image/*"><br>
-        Image Preview<img id="blah" src="#" alt="your image"><br>
+        <label for="avatar">Your image:</label>
+        <input type="file" id="avatar" name="avatar" accept="image/*" required><br>
+        <label name="image">Image Preview</label>
+        <img id="blah" src="#" alt="your image"><br>
 </fieldset>
-    <fieldset back>
+    <fieldset>
         <legend>Your General Information</legend>
-Name: <input type="text" id="name" required><br>
-        Gender:<input type="radio" name="gender" value="Male" checked>Male
-        <input type="radio" name="gender" value="Female">Female<br>
-        Age: <input type="date" id="age" required><br>
-        Favorite color: <input type="color"><br>
-        Which country: <select name="country"><br>
+       <label for="name">Name</label>
+        <input type="text" id="name" required><br>
+       <label for="Gender">Gender</label>
+        Male<input type="radio" id="gender" value="Male" width="auto" checked>Male
+        Female<input type="radio" name="gender" value="Female" width="auto">Female<br>
+        <label for="age"> Age:</label>
+        <input type="date" id="age" required><br>
+        <label for="Favorite color">Favorite color:</label>
+        <input type="color" id="Favorite color"><br>
+        <label for="country">Which country:</label>
+        <select name="country" id="country"><br>
         <option value="5">Country</option>
         <option value="USA">United States Of America</option>
         <option value="Canada">Canada</option>
@@ -53,19 +59,30 @@ Name: <input type="text" id="name" required><br>
    </fieldset>
     <fieldset>
         <legend>Your Indicators</legend>
-        Height: Short<input type="range" min="0" max="100">Tall<br>
-        Salary: Poor<input type="range" min="0" max="100"><br>
-</fieldset>
-    <fieldset>
-        <legend>Your Contact Information</legend>
-        Email<input type="email" id="Email" required><br>
-        Mobile<input type="tel" id="tel" required><br>
-        Adress<input typearea="adress" required><br>
-        Method to contact you:<input type="checkbox" name="contact" VALUE="cellphone">Cellphone
-        <input type="checkbox" name="contact" value="email">Email
-        <input type="checkbox" name="contact" value="chat">In-app Chat
+
+        <label for="Height" class="label-text"> Height: </label>
+        <h4 class="Height"> Short </h4>
+        <input class="align" type="range" min="0" max="100" id="Height">
+        <h4 class="Salary"> Tall</h4> <br>
+        <label for="Income" class="label-text"> Salary:</label>
+        <h4 class="Poor">Poor</h4>
+        <input  type="range" min="0" max="100" id="Income">
+        <h4 class="Rich">Rich</h4>
 
     </fieldset>
+<fieldset>
+        <legend>Your Contact Information</legend>
+        <label for="Email"></label>Email<input type="email" id="Email" required><br>
+    <label for="Mobile"></label>Mobile<input type="mobile" id="mobile" required><br>
+        <label for="Adress">Adress</label>
+    <textarea id="adress"></Textarea><br>
+    <label for="Contact">Contact</label>
+    <input type="checkbox" id="contact" VALUE="cellphone" width="auto">Cellphone
+        <span class="tall"><input type="checkbox" name="contact" value="email" width="auto">Email</span>
+        <span class="tall"><input type="checkbox" name="contact" value="chat" width="auto">In-app Chat</span>
+
+    </fieldset>
+    <input type="submit">
 </table>
 
 </form>
