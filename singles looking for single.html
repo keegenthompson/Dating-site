@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
 
     <title>Looking for them singles</title>
+
+    <link rel="stylesheet" type="text/css" href="external.css">
+    <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet"
+          type="text/css" />
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+
+</head>
+<body>
 <style>
     Fieldset {
         background-color:lightyellow; color: black;
@@ -17,17 +26,64 @@
      textarea {
          width:360px; height: 50px; }
 
+
     .info{
         width: auto;
     }
-<
+    h4.salary{
+        display: inline;
+        font-weight: normal;
+        color: white; background-color: purple;
+        border: 2px purple;
+        padding-left: 7px;
+        padding-right: 7px;
+        text-align: center;
+    }
 
+    h4.Height {
+        display: inline;
+        font-weight: normal;
+        color: white;
+        background-color: #a70e03;
+        border: 2px solid #a70e03;
+        vertical-align: top;
+
+    }  h4.Poor {
+        display: inline;
+        font-weight: normal;
+        color: white;
+        background-color: #a70e03;
+        border: 2px solid #a70e03;
+        padding-left: 4px;
+        padding-right: 5px;
+        text-align: center;
+        vertical-align: top;
+    }
+    h4.Rich {
+        display: inline;
+        font-weight: normal;
+        color: white;
+        background-color: purple;
+        border: 2px solid purple;
+        padding-left: 4px;
+        padding-right: 5px;
+    }
+    input.align {
+        display: table-cell;
+        vertical-align: middle;
+        height: 6px;
+        border: 1px solid;
+        padding-left: 2.5px;
+    }
+
+    label:hover{font-size: 30px;
+
+    }
+    <style>
+     article, aside, figure, footer, header, hgroup,
+     menu, nav, section { display: block; }
 
 </style>
-
-
-</head>
-<body>
 <label method="post" id="Datingform"></label>
     <fieldset>
     <legend>Your appearance</legend>
@@ -58,22 +114,29 @@
         </select>
    </fieldset>
     <fieldset>
+
         <legend>Your Indicators</legend>
+<table>
 
-        <label for="Height" class="label-text"> Height: </label>
-        <h4 class="Height"> Short </h4>
-        <input class="align" type="range" min="0" max="100" id="Height">
-        <h4 class="Salary"> Tall</h4> <br>
-        <label for="Income" class="label-text"> Salary:</label>
-        <h4 class="Poor">Poor</h4>
-        <input  type="range" min="0" max="100" id="Income">
-        <h4 class="Rich">Rich</h4>
+    <tr>
+       <td><label for="Height" class="label-text"> Height: </label></td>
+        <td><h4 class="Height"> Short </h4></td>
+        <td><input class="align" type="range" min="0" max="100" id="Height"></td>
+        <td><h4 class="salary">Tall</h4></td>
+    </tr>
 
+    <tr>
+        <td><label for="income" class="label-text"> Salary: </label></td>
+        <td><h4 class="Poor">Poor</h4></td>
+        <td><input  type="range" min="0" max="100" id="Income"></td>
+            <td><h4 class="Rich">Rich</h4></td>
+    </tr>
+</table>
     </fieldset>
 <fieldset>
         <legend>Your Contact Information</legend>
-        <label for="Email"></label>Email<input type="email" id="Email" required><br>
-    <label for="Mobile"></label>Mobile<input type="mobile" id="mobile" required><br>
+        <label for="Email">Email</label><input type="email" id="Email" required><br>
+    <label for="Mobile">Mobile</label><input type="mobile" id="mobile" required><br>
         <label for="Adress">Adress</label>
     <textarea id="adress"></Textarea><br>
     <label for="Contact">Contact</label>
@@ -83,8 +146,20 @@
 
     </fieldset>
     <input type="submit">
-</table>
 
-</form>
+<script type="text/javascript">
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('#blah')
+                        .attr('src', e.target.result)
+                        .width(150)
+                        .height(200);
+            };
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+        </script>
 </body>
 </html>
